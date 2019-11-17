@@ -9,11 +9,24 @@
 </head>
 <body>
     <h1>Track your calories</h1>
-    <form>
-        <input placeholder="meal">
-        <input placeholder="calories">
-        <button><img src="assets/plus.png" width=10 height="">Add
+    <form onsubmit="app.addMeal(event)">
+        <input placeholder="meal" name="meal" type="text">
+        <input placeholder="calories" name="calories" type="number">
+        <button><img src="assets/plus.png" width=10 />Add</button> 
     </form>
+    <table id="table">
+        <thead>
+            <th>
+                N
+            </th>
+            <th>
+                Meal
+            </th>
+            <th>
+                Calories
+            </th>
+        </thead>
+    </table>
     <script src="script.js"></script>
 </body>
 </html>
