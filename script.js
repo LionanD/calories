@@ -7,23 +7,43 @@ var db = []
 export function addMeal(event) {
     event.preventDefault()
 
-    var id = db.push({
-        no: db.length + 1,
+    db.push({
         meal: event.target.meal.value,
         calories: event.target.calories.value
-    }) - 1;
+    });
 
-    render(db[id])
+    render()
 }
 
-function render({ no, meal, calories }) {
-    var tr = document.createElement('tr')
+function render() {
+    var tbody = document.createElement('tbody')
+    tbody.id = 'tbd'
 
-    tr.innerHTML = `
-        <td>${no}</td>
-        <td>${meal}</td>
-        <td>${calories}</td>
-    `
+    db.forEach(function({ meal, calories }, index) {
+        var tr = document.createElement('tr')
+        
+        tr.addEventListener('click', function(event) {
+            removeMeal(event.target.parentNode)
+        })
 
-    table.append(tr)
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${meal}</td>
+            <td>${calories}</td>
+        `
+
+        tbody.append(tr)
+    })
+
+    tbd.replaceWith(tbody)
+}
+
+function removeMeal(node) {
+    var id = node.querySelector('td').innerText - 1
+
+    db = db.filter(function(el, index) {
+        return index !== id
+    })
+
+    render()
 }
