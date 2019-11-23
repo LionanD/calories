@@ -1,0 +1,24 @@
+table {
+        border-collapse: collapse;
+        border: 3px solid rgb(41, 3, 41);
+      
+}
+tr {
+    border-collapse: collapse;
+     border: 3px solid rgb(230, 190, 82);
+     
+}
+th,td {
+    border-collapse: collapse;
+        border: 3px solid rgb(41, 3, 41);
+}
+tr:nth-child(2n) {
+    background-color: rgba(84, 170, 69, 0.726);
+}
+tr:nth-child(2n+1) {
+    background-color: rgb(198, 235, 181)
+}
+#mmeal:focus {
+    color:rebeccapurple;
+    
+}
