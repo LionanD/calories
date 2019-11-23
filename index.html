@@ -8,13 +8,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Track your calories</h1>
+    <!-- <div class="container"> -->
+    <header>
+        <h1><b>Track</b> your calories</h1>
+    </header>
     <form id="12" onsubmit="app.addMeal(event)">
-        <input placeholder="meal" name="meal" type="text">
-        <input placeholder="calories" name="calories" type="number">
-        <button><img src="assets/plus.png" width=10 />Add</button> 
+            <input placeholder="meal" name="meal" type="text">
+            <input placeholder="calories" name="calories" type="number">
+            <!-- <a href="#on" class="button">Add</a> -->
+            <button>Add</button> 
     </form>
+    <!-- <div class="table-container"> -->
     <table id="table">
+        <thead>
         <tr>
             <th>
                 N
@@ -26,8 +32,10 @@
                 Calories
             </th>
         </tr>
+        </thead>
         <tbody id="tbd"></tbody>
     </table>
+    <!-- </div> -->
     <!-- <button onclick="app.buttClick()">remove</button> -->
     <script src="script.js"></script>
 </body>
