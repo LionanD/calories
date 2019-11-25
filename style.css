@@ -1,5 +1,11 @@
 body {
-    background: #1D1B26;
+    background: linear-gradient(140deg, #274b74d5, #8133c5c5 70%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html, body {
+    height: 100%
 }
 
 h1 {
@@ -19,12 +25,19 @@ h1 {
     max-width: 960px;
     margin: 0 auto;
 } */
+
+TD, TH {
+    padding: 3px; 
+    border: 1px solid black; 
+    border-radius: 5px
+}
 table {
-    margin: 5% auto 0 auto;
-    width: 50%;
+    background: white;
+    margin: 2% auto 0 auto;
+    width: 30%;
     border-collapse: separate;
     border: 2px solid;
-    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border-image: linear-gradient(140deg, #274B74, #8233C5, #E963FD);
     border-image-slice: 1;
 }
 header {
@@ -44,8 +57,8 @@ button {
     display: inline-block;
     /* position: absolute; */
     padding: 1px 4px;
-    border: 1px solid;
-    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #8233C5 60%, #E963FD);
     border-image-slice: 1;
     /* margin: 2px 3px;    */
     font-size: 10;
@@ -64,7 +77,7 @@ button:before {
     width: 100%;
     z-index: -1;
     color: white;
-    background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    background: linear-gradient(140deg, #274B74, #8233C5, #E963FD);
     opacity: .3;
     transition: .8s cubic-bezier(.165,.84,.44,1);
   }
