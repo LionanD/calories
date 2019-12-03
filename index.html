@@ -1,42 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <!-- <div class="container"> -->
-    <header>
-        <h1><b>Track</b> your calories</h1>
-    </header>
-    <form id="12" onsubmit="app.addMeal(event)">
-            <input placeholder="meal" name="meal" type="text">
-            <input placeholder="calories" name="calories" type="number">
-            <!-- <a href="#on" class="button">Add</a> -->
-            <button>Add</button> 
-    </form>
-    <!-- <div class="table-container"> -->
-    <table id="table">
-        <thead>
-        <tr>
-            <th>
-                N
-            </th>
-            <th>
-                Meal
-            </th>
-            <th>
-                Calories
-            </th>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="content">
+      <table class="table">
+        <tr class="htr1">
+          <td>No</td>
+          <td>Meal</td>
+          <td>Calories</td>
         </tr>
-        </thead>
-        <tbody id="tbd"></tbody>
-    </table>
-    <!-- </div> -->
-    <!-- <button onclick="app.buttClick()">remove</button> -->
+        <tr>
+          <td>1</td>
+          <td>Smthng</td>
+          <td>Smthng</td>
+        </tr>
+        <tr class="htr2">
+          <td>2</td>
+          <td>Smthng</td>
+          <td>Smthng</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Smthng</td>
+          <td>Smthng</td>
+        </tr>
+        <tr class="htr2">
+          <td>4</td>
+          <td>Smthng</td>
+          <td>Smthng</td>
+        </tr>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="footer">
+      <div class="icon">
+        <svg class="ico1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 20H16V16H20V20ZM14 10H10V14H14V10ZM20 10H16V14H20V10ZM8 16H4V20H8V16ZM14 16H10V20H14V16ZM8 10H4V14H8V10ZM24 2V24H0V2H3V3C3 4.103 3.897 5 5 5C6.103 5 7 4.103 7 3V2H17V3C17 4.103 17.897 5 19 5C20.103 5 21 4.103 21 3V2H24ZM22 8H2V22H22V8ZM20 1C20 0.448 19.553 0 19 0C18.447 0 18 0.448 18 1V3C18 3.552 18.447 4 19 4C19.553 4 20 3.552 20 3V1ZM6 3C6 3.552 5.553 4 5 4C4.447 4 4 3.552 4 3V1C4 0.448 4.447 0 5 0C5.553 0 6 0.448 6 1V3Z"/>
+            <defs>
+              <linearGradient id="paint0_linear" x1="12" y1="0" x2="12" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#46EAF5"/>
+                <stop offset="1" stop-color="#2CA8F5"/>
+              </linearGradient>
+            </defs>
+        </svg>
+      </div>
+      <div class="icon">
+        <svg class="ico1" width="24" height="26" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 21H1V16H5V21H7V11H11V21H13V6H17V21H19V0H23V21H24V22H0V21ZM4 17H2V21H4V17ZM10 12H8V21H10V12ZM16 7H14V21H16V7ZM22 1H20V21H22V1Z"/>
+        </svg>
+      </div>
+      <div class="icon">
+        <div class="ico"><p>+</p></div>
+      </div>
+      <div class="icon">
+        <svg class="ico1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 12C7 14.5737 9.093 16.6667 11.6667 16.6667C13.7212 16.6667 15.449 15.3238 16.0708 13.477L18.6655 11.9708L18.6667 12C18.6667 15.8663 15.533 19 11.6667 19C7.80033 19 4.66667 15.8663 4.66667 12C4.66667 8.13368 7.80033 5.00001 11.6667 5.00001C12.9313 5.00001 14.1143 5.34068 15.1375 5.92634L12.5592 7.42318C12.2698 7.36718 11.9723 7.33334 11.6667 7.33334C9.093 7.33334 7 9.42634 7 12ZM11.6667 9.66668C10.3775 9.66668 9.33333 10.712 9.33333 12C9.33333 13.288 10.3775 14.3333 11.6667 14.3333C12.9558 14.3333 14 13.288 14 12L13.9977 11.9825L17.9177 9.70751C19.0563 9.04834 21.0723 9.31551 22.2472 9.89301L28 6.55284L24.3157 4.72234L24.5128 0.48501L18.7437 3.83334C18.662 5.14118 17.8873 7.02534 16.7545 7.68451L12.8077 9.97584C12.4693 9.78568 12.0832 9.66668 11.6667 9.66668ZM20.9942 11.8962L21 12C21 17.1462 16.8128 21.3333 11.6667 21.3333C6.5205 21.3333 2.33333 17.1462 2.33333 12C2.33333 6.85384 6.5205 2.66668 11.6667 2.66668C13.3875 2.66668 14.9952 3.14268 16.3812 3.95818C16.7708 3.27451 16.8805 2.15684 16.5515 1.41484C15.064 0.727677 13.4132 0.333344 11.6667 0.333344C5.22317 0.333344 0 5.55651 0 12C0 18.4435 5.22317 23.6667 11.6667 23.6667C17.7718 23.6667 22.7745 18.9755 23.2832 13.001C22.932 12.4375 22.0395 11.7632 20.9942 11.8962Z"/>
+        </svg>
+      </div>
+      <div class="icon">
+        <svg class="ico1" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM19.753 18.305C19.492 17.719 18.964 17.314 17.882 17.064C15.589 16.535 13.454 16.071 14.489 14.119C17.634 8.177 15.322 5 12 5C8.612 5 6.356 8.299 9.511 14.119C10.577 16.083 8.363 16.546 6.118 17.064C5.034 17.314 4.51 17.722 4.251 18.31C2.846 16.587 2 14.391 2 12C2 6.486 6.486 2 12 2C17.514 2 22 6.486 22 12C22 14.389 21.155 16.583 19.753 18.305Z"/>
+        </svg>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
